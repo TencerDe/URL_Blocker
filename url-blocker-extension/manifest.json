@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Unbreakable URL Blocker developed by TencerDe",
+  "version": "1.0",
+  "description": "Blocks social media and distractions for a fixed time.",
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": [
+    "https://*.facebook.com/*",
+    "https://*.youtube.com/*",
+    "https://*.instagram.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": false,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
